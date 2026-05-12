@@ -11,13 +11,14 @@ import FindUs from "./pages/FindUsPage";
 import AboutUs from "./pages/AboutUsPage";
 
 import WhatsAppFloat from "./components/common/WhatsAppFloat";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 const Layout = () => (
   <>
     <Navbar />
+    <ScrollToTop />
     <Outlet />
     <Footer />
-
     <WhatsAppFloat />
   </>
 );
