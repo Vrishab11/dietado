@@ -1,22 +1,27 @@
+// Rice 
+// Noodle
+// Air broasted
+// Desert
+
 export const categories = [
   {
-    id: "cut-fruits",
-    name: "CUT FRUITS",
+    id: "salads",
+    name: "SALADS",
     image: "",
   },
   {
-    id: "smoothies",
-    name: "SMOOTHIES",
+    id: "fresh-juice",
+    name: "FRESH JUICE",
     image: "",
   },
   {
-    id: "juices",
-    name: "JUICES",
+    id: "fruit-bowl",
+    name: "FRUIT BOWL",
     image: "",
   },
   {
-    id: "veg",
-    name: "VEG",
+    id: "rice",
+    name: "RICE",
     image: "",
   },
   {
