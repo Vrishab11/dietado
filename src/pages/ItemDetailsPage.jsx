@@ -57,7 +57,7 @@ function ItemDetailsPage() {
             className="relative flex justify-center"
           >
 
-            <div className="absolute w-[420px] h-[420px] rounded-full bg-[#F4D300]" />
+            {/* <div className="absolute w-[520px] h-[520px] rounded-full bg-[#F4D300]" /> */}
 
             <motion.img
               whileHover={{
@@ -68,9 +68,12 @@ function ItemDetailsPage() {
               alt={product.title}
               className="
                 relative z-10
-                w-[400px]
+                w-[800px]
                 object-contain
                 drop-shadow-2xl
+                border-2 border-transparent rounded-full
+                borderShadow-[0_20px_35px_rgba(0,0,0,0.25)]
+                transition-all duration-50 hover:brightness-110
               "
             />
 
@@ -83,10 +86,10 @@ function ItemDetailsPage() {
           >
 
             <div className="inline-block mb-5 px-5 py-2 rounded-full bg-[#F4D300] text-[#E61E25] font-black uppercase tracking-wide text-sm">
-              {product.category}
+              {product?.subcategory || product.category}
             </div>
 
-            <h1 className="text-[#E61E25] text-5xl md:text-7xl font-black leading-[0.9] mb-6">
+            <h1 className="text-[#E61E25] text-3xl md:text-5xl font-black leading-[0.9] mb-6">
               {product.title}
             </h1>
 
@@ -121,7 +124,7 @@ function ItemDetailsPage() {
 
             <div className="mb-10">
               <h2 className="text-[#E61E25] text-4xl font-black">
-                {product.price}
+               ₹ {product.price}
               </h2>
             </div>
 

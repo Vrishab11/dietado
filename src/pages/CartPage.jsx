@@ -18,11 +18,7 @@ function CartPage() {
     } = useCart();
 
     const totalAmount = cart.reduce((total, item) => {
-        const numericPrice = parseFloat(
-            item.price.replace("Rs", "")
-        );
-
-        return total + numericPrice * item.quantity;
+        return total + Number(item.price) * item.quantity;
     }, 0);
 
     const handlePlaceOrder = () => {
@@ -149,7 +145,7 @@ Thank you.
                                         </h2>
 
                                         <p className="text-[#7A0D12] text-lg font-bold">
-                                            {item.price}
+                                            ₹ {item.price}
                                         </p>
 
                                     </div>
@@ -251,10 +247,7 @@ Thank you.
                                     </div>
 
                                     <p className="font-black text-[#E61E25]">
-                                        ₹
-                                        {parseFloat(
-                                            item.price.replace("Rs", "")
-                                        ) * item.quantity}
+                                        ₹{item.price * item.quantity}
                                     </p>
 
                                 </div>

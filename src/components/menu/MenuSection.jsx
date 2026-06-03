@@ -16,8 +16,10 @@ const fetchMenuByCategory = async (category) => {
 };
 
 function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState("veg");
-  const [menuItems, setMenuItems] = useState(MENU_DATA["veg"]);
+  const defaultCategory = categories[0].id;
+
+  const [activeCategory, setActiveCategory] = useState(defaultCategory);
+  const [menuItems, setMenuItems] = useState(MENU_DATA[defaultCategory]);
 
   const handleCategoryClick = async (categoryId) => {
     setActiveCategory(categoryId);
@@ -162,12 +164,12 @@ function MenuSection() {
                   <div className="flex flex-col justify-between h-full">
 
                     <div>
-                      <h3 className="text-[#E61E25] text-3xl font-black leading-[0.95] mb-4">
+                      <h3 className="text-[#E61E25] text-2xl font-black leading-[0.95] mb-4">
                         {item.title}
                       </h3>
 
                       <p className="text-[#E61E25] font-bold text-lg mb-4">
-                        {item.price}
+                        ₹ {item.price}
                       </p>
 
                       <motion.button
@@ -184,7 +186,7 @@ function MenuSection() {
                       </motion.button>
                     </div>
 
-                    <div className="mt-6 w-14 h-24 rounded-lg bg-[#F4D300]" />
+                    {/* <div className="mt-6 w-14 h-24 rounded-lg bg-[#F4D300]" /> */}
                   </div>
 
                   <div className="relative min-w-[180px] h-[180px] flex items-center justify-center">
@@ -193,16 +195,25 @@ function MenuSection() {
 
                     <motion.img
                       whileHover={{
-                        scale: 1.05,
-                        rotate: 2,
+                        scale: 1.1,
+                        rotate: 3,
+                        y: -10,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 15,
                       }}
                       src={item.image}
                       alt={item.title}
                       className="
                         relative z-10
-                        w-[170px]
+                        w-[180px]
                         object-contain
-                        drop-shadow-2xl
+                        drop-shadow-[0_20px_35px_rgba(0,0,0,0.25)]
+                        transition-all duration-300
+                        hover:brightness-110
+                        border-2 border-transparent rounded-full
                       "
                     />
                   </div>
