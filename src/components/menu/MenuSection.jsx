@@ -71,7 +71,7 @@ function MenuSection() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-7 mb-20">
+        <div className="flex flex-wrap justify-center gap-4 mb-20">
 
           {categories.map((category) => {
             const isActive = activeCategory === category.id;
@@ -151,7 +151,7 @@ function MenuSection() {
                   y: -10,
                 }}
                 className="
-                  bg-white rounded-[32px]
+                  bg-white rounded-[12px]
                   p-5 shadow-xl
                   overflow-hidden relative
                   cursor-pointer
