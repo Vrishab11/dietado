@@ -37,7 +37,7 @@ function Footer() {
 
             <div className="flex items-center gap-3">
               <FaPhoneAlt className="text-lg" />
-              <span>+91 98765 43210</span>
+              <span>+91 80758 70401</span>
             </div>
 
           </div>
@@ -45,10 +45,10 @@ function Footer() {
           <div className="flex items-center gap-4">
 
             {[
-              <FaInstagram />,
-              <FaYoutube />,
-              <FaFacebookF />,
-              <FaWhatsapp />,
+              <FaInstagram onClick={() => window.open("https://www.instagram.com/diet.ado/", "_blank")} />,
+              <FaYoutube onClick={() => window.open("https://www.youtube.com/c/Dietado", "_blank")} />,
+              <FaFacebookF onClick={() => window.open("https://www.facebook.com/dietad0", "_blank")} />,
+              <FaWhatsapp onClick={() => window.open("https://wa.me/918075870401", "_blank")} />,
             ].map((icon, index) => (
               <button
                 key={index}

@@ -650,7 +650,7 @@ export const MENU_DATA = {
     },
   ],
 
-  juices: [
+  smoothies: [
     // --- SMOOTHIES ---
     {
       id: 48,
@@ -703,7 +703,7 @@ export const MENU_DATA = {
         "A creamy, energizing high-protein smoothie designed to keep you full, focused, and active throughout the day. Whey protein supports muscle recovery, while coffee gives a natural energy boost. Dates add natural sweetness and essential minerals.",
     },
   ],
-  smoothies: [
+  juices: [
     // --- JUICES ---
     {
       id: 53,
@@ -727,7 +727,7 @@ export const MENU_DATA = {
     },
     {
       id: 55,
-      category: "drinks",
+      category: "juices",
       title: "Carrot Juice",
       price: 139,
       calories: 200,

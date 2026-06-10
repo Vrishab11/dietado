@@ -46,7 +46,7 @@ Thank you.
         const encodedMessage =
             encodeURIComponent(message);
 
-        const phoneNumber = "919895671179";
+        const phoneNumber = "918075870401";
 
         window.open(
             `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
