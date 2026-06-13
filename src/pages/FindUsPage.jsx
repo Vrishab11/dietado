@@ -118,7 +118,7 @@ function FindUs() {
                                 </p>
 
                                 <h3 className="text-[#1E1E1E] text-2xl font-bold">
-                                    Dine-in | Takeaway | Delivery
+                                    Takeaway | Delivery
                                 </h3>
                             </div>
 
