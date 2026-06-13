@@ -385,6 +385,7 @@ function Hero() {
 
               text-sm md:text-base
             "
+            onClick={() => { window.open("https://wa.me/918075870401/?text=Hello! I'm interested in your subscription plan.") }}
           >
             Subscription Plan
           </button>
