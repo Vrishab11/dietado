@@ -59,7 +59,7 @@ function MenuSection() {
   const { addToCart } = useCart();
 
   return (
-    <section className="relative overflow-hidden bg-[#ECE8B6] py-8 px-6 md:px-12 lg:px-24" id="menu">
+    <section className="relative overflow-hidden bg-[#D54744] py-8 px-6 md:px-12 lg:px-24" id="menu">
 
       <div className="max-w-7xl mx-auto relative z-10">
 
