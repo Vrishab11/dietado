@@ -21,6 +21,10 @@ function CartPage() {
         return total + Number(item.price) * item.quantity;
     }, 0);
 
+    const cgst = totalAmount * 0.025;
+    const sgst = totalAmount * 0.025;
+    const grandTotal = totalAmount + cgst + sgst;
+
     const handlePlaceOrder = () => {
         if (cart.length === 0) return;
 
@@ -38,7 +42,7 @@ ${orderLines.join("\n")}
 
 ----------------------------
 
-Total: ₹${totalAmount}
+Total: ₹${grandTotal}
 
 Thank you.
 `;
@@ -255,16 +259,46 @@ Thank you.
 
                         </div>
 
-                        <div className="border-t border-[#E61E25]/10 pt-6 mb-8">
+                        <div className="border-t border-[#E61E25]/10 pt-6 mb-8 space-y-3">
 
-                            <div className="flex items-center justify-between">
+                            <div className="flex justify-between">
+                                <span className="text-[#7A0D12] font-medium">
+                                    Sub Total
+                                </span>
+
+                                <span className="font-bold text-[#E61E25]">
+                                    ₹{totalAmount.toFixed(2)}
+                                </span>
+                            </div>
+
+                            <div className="flex justify-between">
+                                <span className="text-[#7A0D12] font-medium">
+                                    CGST (2.5%)
+                                </span>
+
+                                <span className="font-bold text-[#E61E25]">
+                                    ₹{cgst.toFixed(2)}
+                                </span>
+                            </div>
+
+                            <div className="flex justify-between">
+                                <span className="text-[#7A0D12] font-medium">
+                                    SGST (2.5%)
+                                </span>
+
+                                <span className="font-bold text-[#E61E25]">
+                                    ₹{sgst.toFixed(2)}
+                                </span>
+                            </div>
+
+                            <div className="border-t border-dashed border-[#E61E25]/20 pt-4 flex justify-between">
 
                                 <h3 className="text-[#7A0D12] text-xl font-bold">
-                                    Total
+                                    Grand Total
                                 </h3>
 
                                 <h2 className="text-[#E61E25] text-3xl font-black">
-                                    ₹{totalAmount}
+                                    ₹{grandTotal.toFixed(2)}
                                 </h2>
 
                             </div>
